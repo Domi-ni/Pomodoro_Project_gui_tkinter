@@ -64,10 +64,10 @@ def countdown(count):
         timer = window.after(1000, countdown, count - 1)
     if count == 0:
         start()
-        if reps % 2 == 0:
-            mark = []
-            mark += "✔"
-            check_marks.config(text=mark)
+    if reps % 2 == 0:
+        mark = []
+        mark += "✔"
+        check_marks.config(text=mark)
 
 # ---------------------------- UI SETUP ------------------------------- #
 
