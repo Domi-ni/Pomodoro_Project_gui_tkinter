@@ -30,8 +30,6 @@ def reset_timer():
 
 
 def start():
-    count_min = "00"  # count / 60
-    count_sec = 25
     global reps
     if reps == 7:
         title_label.config(text="Break", fg=RED)
@@ -56,7 +54,7 @@ def start():
 
 
 def countdown(count):
-    count_min = math.floor(count / 60)
+    count_min = f"00{math.floor(count / 60)}"
     count_sec = count % 60
     if count_sec < 10:
         count_sec = f"0{count_sec}"
